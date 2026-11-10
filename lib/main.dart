@@ -1,13 +1,41 @@
-Recipe Name: Vegetable Biryani
-Cooking Time: 30 minutes
-Rating: 4.5
-Vegetarian: true
-Quick Recipe
 
-Recipe Ingredients:
-Rice
-Vegetables
-Spices
-Oil
+void main() {
+  // Variables and data types
+  String recipeName = "Vegetable Biryani";
+  int cookingTime = 30;
+  double rating = 4.5;
+  bool isVegetarian = true;
 
-Welcome to Dart Programming!
+  print("Recipe Name: $recipeName");
+  print("Cooking Time: $cookingTime minutes");
+  print("Rating: $rating");
+  print("Vegetarian: $isVegetarian");
+
+  // Conditional statement
+  if (cookingTime <= 30) {
+    print("Quick Recipe");
+  } else {
+    print("Time-consuming Recipe");
+  }
+
+  // List and loop
+  print("\nRecipe Ingredients:");
+
+  List<String> ingredients = [
+    "Rice",
+    "Vegetables",
+    "Spices",
+    "Oil"
+  ];
+
+  for (String ingredient in ingredients) {
+    print(ingredient);
+  }
+
+  // Function
+  displayMessage();
+}
+
+void displayMessage() {
+  print("\nWelcome to Dart Programming!");
+}
