@@ -1,24 +1,39 @@
+# Recipe Book App
 
-# recipe_book_app
+## Abstract
 
-A new Flutter project.
+The Recipe Book App is a Flutter-based mobile application developed to help users explore, organize, and manage their favourite recipes in a simple and convenient way. The application aims to provide an easy-to-use interface for displaying recipe-related information.
 
-## Getting Started
+The project is developed step by step by implementing different Flutter and Dart concepts through experiments. It includes Flutter and Dart basics, widgets and layouts, images, icons, navigation, and responsive user interface design.
 
-This project is a starting point for a Flutter application.
+This project helps in understanding the practical implementation of Flutter concepts while developing a useful recipe management application. The Recipe Book App can be further improved by adding features such as recipe categories, ingredients, cooking instructions, search functionality, and favourite recipes.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Experiment 1 – Flutter and Dart Basics
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# Abstract
+In this experiment, I created the basic Recipe Book App project and learned the fundamentals of Flutter and Dart programming.
 
-The Recipe Book App is a user-friendly mobile application developed using Flutter to help users discover, view, and organize recipes in one convenient platform. The application provides essential recipe details such as ingredients, preparation steps, cooking time, difficulty level, and category. Users can browse different recipes, search for specific dishes, view detailed cooking instructions, and save their favorite recipes for quick access. The app features a simple, attractive, and responsive interface that makes navigation easy and provides a smooth user experience.
+### Experiment 1(a) – Installation of Flutter and Dart SDK
 
-Flutter is used for development because it supports cross-platform applications and provides flexible tools for creating interactive interfaces. The project demonstrates important concepts such as UI design, navigation, search functionality, data management, and responsive layouts. Overall, the Recipe Book App works as a digital cookbook, making it easier for users to explore and manage recipes anytime. It can be further enhanced with user accounts, recipe sharing, ratings, personalized recommendations, and online storage.
+In this experiment, I installed and configured the Flutter and Dart SDK and set up the development environment.
+
+### Experiment 1(a) Output
+
+![Experiment 1a Output](screenshots/exp1a_output.png)
+
+---
+
+## Experiment 1(b) – Dart Language Basics
+
+In this experiment, I practised basic Dart programming concepts such as variables, data types, operators, conditional statements, loops, and functions.
+
+### Experiment 1(b) Output
+
+![Experiment 1a Output](screenshots/exp1b_output.png)
+
+---
+
+## Experiment 2 – Flutter Widgets and Layouts
+
+Add the experiment description and output screenshot here after completing Experiment 2.
