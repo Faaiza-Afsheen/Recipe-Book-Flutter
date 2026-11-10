@@ -1,41 +1,59 @@
 
-void main() {
-  // Variables and data types
-  String recipeName = "Vegetable Biryani";
-  int cookingTime = 30;
-  double rating = 4.5;
-  bool isVegetarian = true;
+import 'package:flutter/material.dart';
 
-  print("Recipe Name: $recipeName");
-  print("Cooking Time: $cookingTime minutes");
-  print("Rating: $rating");
-  print("Vegetarian: $isVegetarian");
+void main() => runApp(const MyApp());
 
-  // Conditional statement
-  if (cookingTime <= 30) {
-    print("Quick Recipe");
-  } else {
-    print("Time-consuming Recipe");
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Recipe Book App',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+      ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Basic Flutter Widgets"),
+          backgroundColor: Colors.orange,
+        ),
+        body: Center(
+          child: Container(
+            padding: const EdgeInsets.all(16.0),
+            margin: const EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+              color: Colors.orange.shade50,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  "Welcome to Recipe Book App!",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.deepOrange,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 10),
+                Image.network(
+                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                  height: 120,
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  "Explore your favourite recipes!",
+                  style: TextStyle(fontSize: 16),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
-
-  // List and loop
-  print("\nRecipe Ingredients:");
-
-  List<String> ingredients = [
-    "Rice",
-    "Vegetables",
-    "Spices",
-    "Oil"
-  ];
-
-  for (String ingredient in ingredients) {
-    print(ingredient);
-  }
-
-  // Function
-  displayMessage();
-}
-
-void displayMessage() {
-  print("\nWelcome to Dart Programming!");
 }
