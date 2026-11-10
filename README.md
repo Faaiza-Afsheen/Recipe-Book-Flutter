@@ -150,3 +150,42 @@ The `Expanded` widget was used to distribute the available screen space between 
 ### Result
 
 Thus, a responsive user interface was successfully developed in the Recipe Book App using Flutter's LayoutBuilder, Row, Column, and Expanded widgets. The application adapts dynamically to different screen dimensions.
+---
+## Experiment 3 – Responsive UI Design
+
+### Experiment 3(b) – Media Queries and Breakpoints for Responsiveness
+
+**Aim:**
+
+To implement Media Queries to extract device metrics and apply structural breakpoints.
+
+**Description:**
+
+MediaQuery is a Flutter feature used to obtain real-time screen properties such as screen width, height, orientation, and device pixel density.
+
+In this experiment, `MediaQuery.of(context).size` is used to access screen dimensions. A breakpoint of 600 pixels is applied to identify whether the application is running on a mobile device or a tablet/desktop.
+
+**Widgets and Concepts Used:**
+
+- `MediaQuery` – Retrieves screen dimensions.
+- `Container` – Displays the responsive content.
+- `Column` – Arranges widgets vertically.
+- `Text` – Displays screen width, height, and device type.
+- `BoxDecoration` – Applies background color and rounded corners.
+
+**Procedure:**
+
+1. Open the Flutter project in VS Code.
+2. Access screen dimensions using `MediaQuery.of(context).size`.
+3. Define a breakpoint of 600 pixels.
+4. Use conditional statements to identify the device type.
+5. Change padding, background color, and text size according to screen width.
+6. Run the application and test it on different screen sizes.
+
+**Output:**
+
+![Experiment 3(b) Mobile Output](screenshots/exp3b_output.png)
+
+**Result:**
+
+Media Queries and breakpoints were successfully implemented. The application dynamically displays different UI properties based on the available screen dimensions.
