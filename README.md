@@ -189,3 +189,48 @@ In this experiment, `MediaQuery.of(context).size` is used to access screen dimen
 **Result:**
 
 Media Queries and breakpoints were successfully implemented. The application dynamically displays different UI properties based on the available screen dimensions.
+
+---
+## Experiment 4 – Navigation
+
+### Experiment 4(a) – Basic Navigation Using Navigator
+
+**Aim:**
+
+To implement basic screen navigation and data passing using Flutter's Navigator.
+
+**Description:**
+
+Flutter uses the Navigator widget to manage navigation between different screens. In this experiment, two screens, Home Screen and Detail Screen, are created for the Recipe Book App.
+
+The `Navigator.push()` method is used to navigate from the Home Screen to the Detail Screen. The `Navigator.pop()` method is used to return to the previous screen. The recipe name is passed to the Detail Screen using a constructor parameter.
+
+**Widgets and Methods Used:**
+- `Navigator.push()` – Navigates to another screen.
+- `Navigator.pop()` – Returns to the previous screen.
+- `MaterialPageRoute` – Creates a route to the destination screen.
+- `Scaffold` – Provides the basic screen structure.
+- `ElevatedButton` – Performs navigation when clicked.
+
+**Procedure:**
+
+1. Created two StatelessWidget screens named `HomeScreen` and `DetailScreen`.
+2. Designed the Home Screen with a welcome message and navigation button.
+3. Implemented `Navigator.push()` to open the Detail Screen.
+4. Passed the recipe name to the Detail Screen.
+5. Implemented `Navigator.pop()` to return to the Home Screen.
+6. Executed the application and tested the navigation.
+
+**Output Screenshots:**
+
+**Home Screen**
+
+![Experiment 4(a) Home Screen](screenshots/exp4a_homescreen_output.png)
+
+**Recipe Details Screen**
+
+![Experiment 4(a) Recipe Details Screen](screenshots/exp4a_details_output.png)
+
+**Result:**
+
+Basic navigation between two screens was implemented successfully using `Navigator.push()` and `Navigator.pop()`, with recipe data passed to the Detail Screen.
