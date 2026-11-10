@@ -16,91 +16,77 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Row, Column & Stack"),
+          title: const Text("Responsive UI"),
           backgroundColor: Colors.orange,
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const SizedBox(height: 20),
-
-              // Row widget
-              const Text(
-                "Recipe Actions",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  Icon(Icons.star, color: Colors.orange, size: 35),
-                  Icon(Icons.favorite, color: Colors.red, size: 35),
-                  Icon(Icons.thumb_up, color: Colors.blue, size: 35),
-                ],
-              ),
-
-              const SizedBox(height: 30),
-
-              // Stack widget
-              const Text(
-                "Featured Recipe",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-
-              const SizedBox(height: 15),
-
-              Stack(
-                alignment: Alignment.center,
+        body: LayoutBuilder(
+          builder: (context, constraints) {
+            if (constraints.maxWidth > 600) {
+              // Desktop or wide screen layout
+              return Row(
                 children: [
-                  Container(
-                    width: 220,
-                    height: 180,
-                    decoration: BoxDecoration(
-                      color: Colors.orange,
-                      borderRadius: BorderRadius.circular(15),
+                  Expanded(
+                    child: Container(
+                      color: Colors.orange.shade100,
+                      child: const Center(
+                        child: Text(
+                          "Recipe Sidebar",
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                  Container(
-                    width: 150,
-                    height: 120,
-                    decoration: BoxDecoration(
-                      color: Colors.yellow.shade200,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  const Text(
-                    "Delicious Recipe!",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      color: Colors.white,
+                      child: const Center(
+                        child: Text(
+                          "Main Recipe Content",
+                          style: TextStyle(fontSize: 22),
+                        ),
+                      ),
                     ),
                   ),
                 ],
-              ),
-
-              const SizedBox(height: 25),
-
-              // Column widget
-              const Text(
-                "Recipe Details",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-
-              const Text("Recipe: Vegetable Biryani"),
-              const Text("Cooking Time: 30 minutes"),
-              const Text("Rating: 4.5 stars"),
-            ],
-          ),
+              );
+            } else {
+              // Mobile or narrow screen layout
+              return Column(
+                children: [
+                  Expanded(
+                    child: Container(
+                      color: Colors.orange.shade100,
+                      child: const Center(
+                        child: Text(
+                          "Recipe Header",
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      color: Colors.white,
+                      child: const Center(
+                        child: Text(
+                          "Main Recipe Content",
+                          style: TextStyle(fontSize: 22),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            }
+          },
         ),
       ),
     );

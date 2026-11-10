@@ -106,6 +106,47 @@ The following screenshot shows the output of the Recipe Book App demonstrating R
 
 Thus, flexible layouts using Row, Column, and Stack widgets were successfully implemented and displayed in the Recipe Book App.
 
+## Experiment 3 – Responsive UI Design
+
+### Experiment 3(a) – Responsive UI Design
+
+### Aim
+To build a responsive user interface that adapts dynamically to diverse viewport sizes.
+
+### Description
+
+In this experiment, I implemented responsive UI design in Flutter for the Recipe Book App. Responsive design allows an application to adjust its layout according to the available screen size.
+
+The `LayoutBuilder` widget was used to inspect the available screen width and apply different layouts based on the width condition.
+
+For wider screens, the `Row` widget was used to display the recipe sidebar and main content side by side. For smaller screens, the `Column` widget was used to arrange the recipe header and main content vertically.
+
+The `Expanded` widget was used to distribute the available screen space between the layout sections.
+
+### Widgets Used
+
+- **LayoutBuilder:** Checks the available screen constraints.
+- **Row:** Arranges widgets horizontally on wider screens.
+- **Column:** Arranges widgets vertically on smaller screens.
+- **Expanded:** Divides the available space among child widgets.
+- **Container:** Provides background colours and layout sections.
+- **Scaffold:** Provides the basic application structure.
+
+### Procedure
+
+1. Open the Flutter project in VS Code.
+2. Open the `lib/main.dart` file.
+3. Implement the `LayoutBuilder` widget to check screen width.
+4. Use `Row` for wider screens and `Column` for smaller screens.
+5. Run the application using `flutter run`.
+6. Test the application by resizing the browser window or changing the device size.
+
+### Experiment 3(a) Output
+
+**Wide Screen Layout**
+
+![Experiment 3(a) Wide Screen Output](screenshots/exp3a_output.png)
+
 ### Result
 
-Thus, the basic Flutter widgets such as Text, Image, Container, and Scaffold were successfully explored and implemented in the Recipe Book App.
+Thus, a responsive user interface was successfully developed in the Recipe Book App using Flutter's LayoutBuilder, Row, Column, and Expanded widgets. The application adapts dynamically to different screen dimensions.
