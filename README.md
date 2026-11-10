@@ -34,6 +34,36 @@ In this experiment, I practised basic Dart programming concepts such as variable
 
 ---
 
-## Experiment 2 – Flutter Widgets and Layouts
+## Experiment 2 – Exploration of Basic Flutter Widgets
 
-Add the experiment description and output screenshot here after completing Experiment 2.
+### Experiment 2(a) – Basic Flutter Widgets
+
+**Aim:** To explore core structural and presentational widgets in Flutter: Text, Image, Container, and Scaffold.
+
+### Description
+
+In this experiment, I explored the basic widgets available in Flutter by developing a simple user interface for the Recipe Book App.
+
+The `Scaffold` widget was used to create the basic screen structure, while the `AppBar` widget was used to display the application title. The `Text` widget was used to display welcome messages, and the `Image` widget was used to display an image from the internet.
+
+The `Container` widget was used to provide padding, margin, background colour, and rounded corners. The `Center` and `Column` widgets were used to arrange and align the content on the screen.
+
+### Widgets Used
+
+- **Scaffold:** Provides the basic screen structure.
+- **AppBar:** Displays the application title.
+- **Text:** Displays text content.
+- **Image:** Displays an online image.
+- **Container:** Provides styling and spacing.
+- **Center:** Aligns content at the centre.
+- **Column:** Arranges widgets vertically.
+
+### Experiment 2(a) Output
+
+The following screenshot shows the output of the Recipe Book App displaying the basic Flutter widgets.
+
+![Experiment 2(a) Output](screenshots/exp2a_output.png)
+
+### Result
+
+Thus, the basic Flutter widgets such as Text, Image, Container, and Scaffold were successfully explored and implemented in the Recipe Book App.
