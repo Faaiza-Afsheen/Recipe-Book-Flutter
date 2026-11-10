@@ -234,3 +234,35 @@ The `Navigator.push()` method is used to navigate from the Home Screen to the De
 **Result:**
 
 Basic navigation between two screens was implemented successfully using `Navigator.push()` and `Navigator.pop()`, with recipe data passed to the Detail Screen.
+
+---
+## Experiment 4(b) – Navigation with Named Routes
+
+### Aim
+To set up named routes for route abstraction and centralized navigation management.
+
+### Description
+In this experiment, named route navigation is implemented in Flutter using the `MaterialApp` widget. Named routes provide a centralized way to manage navigation between different screens.
+
+The `initialRoute` property specifies the first screen, while the `routes` property defines the available routes. The `Navigator.pushNamed()` method navigates to another screen using its route name, and `Navigator.pop()` returns to the previous screen.
+
+### Widgets and Methods Used
+- **MaterialApp:** Configures the application and its routes.
+- **Scaffold:** Provides the basic screen structure.
+- **AppBar:** Displays the screen title.
+- **Navigator.pushNamed():** Navigates to another screen using a named route.
+- **Navigator.pop():** Returns to the previous screen.
+- **ElevatedButton:** Triggers navigation when pressed.
+
+### Procedure
+1. Create a Flutter application.
+2. Define the `initialRoute` property inside `MaterialApp`.
+3. Configure the `routes` map with route names and corresponding screens.
+4. Create the `HomeScreen` and `RecipeDetailsScreen` widgets.
+5. Use `Navigator.pushNamed(context, '/second')` to navigate to the recipe details screen.
+6. Use `Navigator.pop(context)` to return to the home screen.
+7. Run the application and verify the navigation.
+
+
+### Result
+Named route navigation was successfully implemented in Flutter using `MaterialApp`, `Navigator.pushNamed()` and `Navigator.pop()`. Navigation between the home screen and recipe details screen was achieved using predefined route names.

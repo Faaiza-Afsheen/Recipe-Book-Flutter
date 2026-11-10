@@ -2,10 +2,17 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: HomeScreen(),
-  ));
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Recipe Book App',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/second': (context) => const RecipeDetailsScreen(),
+      },
+    ),
+  );
 }
 
 class HomeScreen extends StatelessWidget {
@@ -15,7 +22,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Recipe Book App"),
+        title: const Text('Recipe Book App'),
         backgroundColor: Colors.orange,
       ),
       body: Center(
@@ -24,12 +31,12 @@ class HomeScreen extends StatelessWidget {
           children: [
             const Icon(
               Icons.restaurant_menu,
-              size: 80,
+              size: 100,
               color: Colors.orange,
             ),
             const SizedBox(height: 20),
             const Text(
-              "Welcome to Recipe Book!",
+              'Welcome to Recipe Book!',
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -38,16 +45,9 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DetailScreen(
-                      recipeName: "Vegetable Biryani",
-                    ),
-                  ),
-                );
+                Navigator.pushNamed(context, '/second');
               },
-              child: const Text("View Recipe Details"),
+              child: const Text('View Recipe Details'),
             ),
           ],
         ),
@@ -56,19 +56,14 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class DetailScreen extends StatelessWidget {
-  final String recipeName;
-
-  const DetailScreen({
-    super.key,
-    required this.recipeName,
-  });
+class RecipeDetailsScreen extends StatelessWidget {
+  const RecipeDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Recipe Details"),
+        title: const Text('Recipe Details'),
         backgroundColor: Colors.orange,
       ),
       body: Center(
@@ -77,24 +72,24 @@ class DetailScreen extends StatelessWidget {
           children: [
             const Icon(
               Icons.rice_bowl,
-              size: 80,
+              size: 100,
               color: Colors.orange,
             ),
             const SizedBox(height: 20),
-            Text(
-              recipeName,
-              style: const TextStyle(
+            const Text(
+              'Vegetable Biryani',
+              style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 10),
             const Text(
-              "Cooking Time: 30 minutes",
+              'Cooking Time: 30 Minutes',
               style: TextStyle(fontSize: 18),
             ),
             const Text(
-              "Category: Main Course",
+              'Category: Main Course',
               style: TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 20),
@@ -102,7 +97,7 @@ class DetailScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text("Back to Home"),
+              child: const Text('Back to Home'),
             ),
           ],
         ),
