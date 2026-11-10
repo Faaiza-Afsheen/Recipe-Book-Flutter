@@ -16,41 +16,90 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Basic Flutter Widgets"),
+          title: const Text("Row, Column & Stack"),
           backgroundColor: Colors.orange,
         ),
         body: Center(
-          child: Container(
-            padding: const EdgeInsets.all(16.0),
-            margin: const EdgeInsets.all(10.0),
-            decoration: BoxDecoration(
-              color: Colors.orange.shade50,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Text(
-                  "Welcome to Recipe Book App!",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const SizedBox(height: 20),
+
+              // Row widget
+              const Text(
+                "Recipe Actions",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  Icon(Icons.star, color: Colors.orange, size: 35),
+                  Icon(Icons.favorite, color: Colors.red, size: 35),
+                  Icon(Icons.thumb_up, color: Colors.blue, size: 35),
+                ],
+              ),
+
+              const SizedBox(height: 30),
+
+              // Stack widget
+              const Text(
+                "Featured Recipe",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Container(
+                    width: 220,
+                    height: 180,
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
                   ),
-                  textAlign: TextAlign.center,
+                  Container(
+                    width: 150,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      color: Colors.yellow.shade200,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  const Text(
+                    "Delicious Recipe!",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 25),
+
+              // Column widget
+              const Text(
+                "Recipe Details",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
-                const SizedBox(height: 10),
-                Image.network(
-                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
-                  height: 120,
-                ),
-                const SizedBox(height: 10),
-                const Text(
-                  "Explore your favourite recipes!",
-                  style: TextStyle(fontSize: 16),
-                ),
-              ],
-            ),
+              ),
+
+              const Text("Recipe: Vegetable Biryani"),
+              const Text("Cooking Time: 30 minutes"),
+              const Text("Rating: 4.5 stars"),
+            ],
           ),
         ),
       ),

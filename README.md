@@ -64,6 +64,48 @@ The following screenshot shows the output of the Recipe Book App displaying the 
 
 ![Experiment 2(a) Output](screenshots/exp2a_output.png)
 
+---
+## Experiment 2(b) – Layout Structures using Row, Column, and Stack
+
+### Aim
+To construct flexible layouts using Row, Column, and Stack widgets in Flutter.
+
+### Description
+
+In this experiment, I explored Flutter layout widgets by developing a simple user interface for the Recipe Book App.
+
+The `Row` widget was used to arrange recipe action icons horizontally. The `Column` widget was used to arrange recipe details vertically, such as recipe name, cooking time, and rating.
+
+The `Stack` widget was used to overlap multiple containers and text on top of each other. These widgets help create flexible and attractive user interfaces in Flutter.
+
+### Widgets Used
+
+- **Row:** Arranges child widgets horizontally.
+- **Column:** Arranges child widgets vertically.
+- **Stack:** Places widgets on top of one another.
+- **Container:** Creates coloured boxes with specified dimensions.
+- **Text:** Displays recipe information.
+- **Icon:** Displays star, favorite, and like icons.
+- **Scaffold:** Provides the basic screen structure of the application.
+
+### Procedure
+
+1. Open the Flutter project in VS Code.
+2. Open the `lib/main.dart` file.
+3. Implement the Row, Column, and Stack widgets.
+4. Run the application using `flutter run`.
+5. Observe the horizontal, vertical, and overlapping layouts.
+
+### Experiment 2(b) Output
+
+The following screenshot shows the output of the Recipe Book App demonstrating Row, Column, and Stack widgets.
+
+![Experiment 2(b) Output](screenshots/exp2b_output.png)
+
+### Result
+
+Thus, flexible layouts using Row, Column, and Stack widgets were successfully implemented and displayed in the Recipe Book App.
+
 ### Result
 
 Thus, the basic Flutter widgets such as Text, Image, Container, and Scaffold were successfully explored and implemented in the Recipe Book App.
